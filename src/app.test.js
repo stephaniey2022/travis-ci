@@ -5,7 +5,7 @@ import App from './App';
 import Home from './components/Home'
 
 
-global.MutationObserver = window.MutationObserver;
+
 test('renders app', () => {
   const { getByText } = render(<App />);
   const titleElement = getByText(/Freedom Generator/i);

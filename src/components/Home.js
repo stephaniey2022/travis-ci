@@ -68,6 +68,7 @@ export default function Home() {
   )
   return (
     <div className="App">
+      <div className="idocForm">
         <h1>Freedom Generator</h1>
         <h5>Enter IDOC number to check eligibility for release</h5>
         <form onSubmit={handleSubmit(onSubmit)}>

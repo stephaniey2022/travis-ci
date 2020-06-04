@@ -12,3 +12,6 @@ notifications:
     recipients:
       - stephanieyaur2022@u.northwestern.edu
     on_failure: always
+after_success:
+  - npm install -g firebase-tools
+  - firebase deploy --token 1//0fY4V9aiC4xPOCgYIARAAGA8SNwF-L9IrForG-Cwh0V11CKKAAY_U_LuDey7o7nRo1qvseWoDJkP_tC9BTFmICEQombfHfw9PgA0 --non-interactive

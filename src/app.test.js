@@ -9,6 +9,6 @@ import Home from './components/Home'
 
 test('renders app', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Freedom Generator/i);
+  const linkElement = getByText(/Freedom Link/i);
   expect(linkElement).toBeInTheDocument();
 });

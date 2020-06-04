@@ -7,3 +7,8 @@ cache:
 script:
   - npm test
   - npm run build
+notifications:
+  email:
+    recipients:
+      - stephanieyaur2022@u.northwestern.edu
+    on_failure: always

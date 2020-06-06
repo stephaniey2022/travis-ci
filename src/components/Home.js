@@ -28,6 +28,7 @@ export default function Home() {
   // callback function for check eligibility.
   const [submitted, setSubmitted] = useState('');
   const [loading, setLoading] = useState('');
+  const [content, setContent] = useState('');
 
   const onSubmit = data => {
     console.log("data:");
@@ -75,12 +76,12 @@ export default function Home() {
           <Grid container justify="center">
             <Grid item>
               <FormControlLabel
-                control={<TextField InputProps={{style:{ background: 'white', paddingLeft:10 }}}name="IDOC_Number" inputRef={register({ required: true })} />}
+                control={<TextField onChange={e => setContent(e.target.value)} value={content} inputProps={{"data-testid": "idoctextfield"}} name="IDOC_Number" inputRef={register({ required: true })} />}
                 label="IDOC Number: &nbsp;"
                 labelPlacement="start"
                 Props={{style:{ color:"white" }}}
               />
-              {errors.IDOC_Number && <p className="error">IDOC Number is required.</p>}
+              <p data-testid="error-message" id="error-message"></p>
             </Grid>
           </Grid>
           <Grid container justify="center">
@@ -92,7 +93,7 @@ export default function Home() {
               />
             </Grid>
           </Grid>
-          {/* <Button type="submit" variant="contained" onClick={()=> setLoading("Loading...")}>Import Data</Button> */}
+          <Button data-testid="submit" type="submit" variant="contained" onClick={()=> setLoading("Loading...")}>Import Data</Button>
           <br />
           <br />
           <div id="Loading">{loading}</div>
@@ -133,7 +134,7 @@ export default function Home() {
               //</Link>}
             } */}
         </form>
-        <div id="eligibility"></div>
+        <div data-testid="eligibility" id="eligibility"></div>
       </div>
     </div>
   );

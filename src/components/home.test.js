@@ -1,17 +1,16 @@
 import React from 'react';
 import { render, waitForElement } from '@testing-library/react';
 import 'mutationobserver-shim';
-import { fireEvent, waitFor, screen } from '@testing-library/react'
+import { fireEvent, waitFor, screen, getByLabelText, getByRole } from '@testing-library/react'
 global.MutationObserver = window.MutationObserver;
 import Home from './Home'
 
 
 
-test('renders app', () => {
-    const { getByText } = render(<Home />);
-//   const linkElement = getByText(/Medical Furlough/i);
-//   expect(linkElement).toBeInTheDocument();
-    fireEvent.click(screen.getByText('Import Data'))
-
-
+test('user story', async() => {
+    const { getByTestId, findByTestId } = render(<Home />);
+    fireEvent.click(getByTestId("submit"));
+    const item = await findByTestId("eligibility");
+    expect(item).toBeInTheDocument();
+    screen.getByText('Medical Furlough', {exact: false});
 });

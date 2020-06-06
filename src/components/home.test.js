@@ -7,10 +7,8 @@ import Home from './Home'
 
 
 
-test('user story', async() => {
+test('buggy commit', async() => {
     const {getByTestId, getByText, findByTestId, toBeInTheDocument} = render(<Home />);
     fireEvent.click(getByTestId("submit"));
-    screen.getByText('Medical Furlough', {exact: false});
-    const eligiblephrase = await findByTestId("eligibility");
-    expect(eligiblephrase).toBeInTheDocument();
+    screen.getByText("Loading...")
 });

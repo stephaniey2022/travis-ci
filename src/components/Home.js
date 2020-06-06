@@ -31,6 +31,7 @@ export default function Home() {
   const [content, setContent] = useState('');
 
   const onSubmit = data => {
+    setLoading("Loading...")
     console.log("data:");
     console.log(data);
     console.log("Loading is: ");
@@ -93,7 +94,7 @@ export default function Home() {
               />
             </Grid>
           </Grid>
-          <Button data-testid="submit" type="submit" variant="contained" onClick={()=> setLoading("Loading...")}>Import Data</Button>
+          <Button data-testid="submit" variant="contained">Import Data</Button>
           <br />
           <br />
           <div id="Loading">{loading}</div>

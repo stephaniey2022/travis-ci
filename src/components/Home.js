@@ -94,7 +94,7 @@ export default function Home() {
               />
             </Grid>
           </Grid>
-          <Button data-testid="submit" variant="contained">Import Data</Button>
+          <Button data-testid="submit" type="submit" variant="contained">Import Data</Button>
           <br />
           <br />
           <div id="Loading">{loading}</div>

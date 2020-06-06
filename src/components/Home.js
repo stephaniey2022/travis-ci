@@ -81,7 +81,7 @@ export default function Home() {
                 labelPlacement="start"
                 Props={{style:{ color:"white" }}}
               />
-              <p data-testid="error-message" id="error-message"></p>
+              {errors.IDOC_Number && <p className="error">IDOC Number is required.</p>}
             </Grid>
           </Grid>
           <Grid container justify="center">

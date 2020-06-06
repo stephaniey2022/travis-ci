@@ -92,7 +92,7 @@ export default function Home() {
               />
             </Grid>
           </Grid>
-          <Button type="submit" variant="contained" onClick={()=> setLoading("Loading...")}>Import Data</Button>
+          {/* <Button type="submit" variant="contained" onClick={()=> setLoading("Loading...")}>Import Data</Button> */}
           <br />
           <br />
           <div id="Loading">{loading}</div>

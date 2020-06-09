@@ -77,7 +77,7 @@ export default function Home() {
           <Grid container justify="center">
             <Grid item>
               <FormControlLabel
-                control={<TextField onChange={e => setContent(e.target.value)} value={content} inputProps={{"data-testid": "idoctextfield"}} name="IDOC_Number" inputRef={register({ required: true })} />}
+                control={<TextField data-cy="idocinput" label="Ex: A00367" onChange={e => setContent(e.target.value)} value={content} inputProps={{"data-testid": "idoctextfield"}} name="IDOC_Number" inputRef={register({ required: true })} />}
                 label="IDOC Number: &nbsp;"
                 labelPlacement="start"
                 Props={{style:{ color:"white" }}}

@@ -21,6 +21,8 @@
   },
   "scripts": {
     "cypress:open": "cypress open",
+    "cypress:ci": "cypress run --config video=false",
+    "test:ci": "react-scripts test --watchAll=false && start-server-and-test start http://localhost:3000 cypress:ci",
     "start": "react-app-env --env-file=config/test.env start",
     "build": "react-app-env --env-file=config/production.env build",
     "start:production": "react-app-env --env-file=config/production.env start",
@@ -45,6 +47,7 @@
   "devDependencies": {
     "@testing-library/react": "^9.5.0",
     "cypress": "^4.8.0",
-    "react-app-env": "^1.2.3"
+    "react-app-env": "^1.2.3",
+    "start-server-and-test": "^1.11.0"
   }
 }

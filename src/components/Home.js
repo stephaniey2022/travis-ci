@@ -82,7 +82,7 @@ export default function Home() {
                 labelPlacement="start"
                 Props={{style:{ color:"white" }}}
               />
-              {errors.IDOC_Number && <p className="error">IDOC Number is required.</p>}
+              {errors.IDOC_Number && <p className="error" data-cy="error">IDOC Number is required.</p>}
             </Grid>
           </Grid>
           <Grid container justify="center">
@@ -94,7 +94,7 @@ export default function Home() {
               />
             </Grid>
           </Grid>
-          <Button data-testid="submit" type="submit" variant="contained">Import Data</Button>
+          <Button data-cy="submit" data-testid="submit" type="submit" variant="contained">Import Data</Button>
           <br />
           <br />
           <div id="Loading">{loading}</div>
